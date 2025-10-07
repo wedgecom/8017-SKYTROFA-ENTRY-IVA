@@ -1,0 +1,113 @@
+@import "00-reset";
+@import "ipad-sizes";
+
+.isi-preview,
+.isi__title,
+.isi__copy,
+#isiModal,
+#references {
+    display: none;;
+}
+
+
+
+button {
+    text-transform: uppercase;
+    padding: 20px;
+    font-size: 18px;
+    position: relative;
+}
+
+html,
+body {
+  background-color: #fff;
+//   font-size: ;
+  font-family: UniversLight, Arial, sans-serif;
+  font-weight: 300;
+//   line-height: ;
+}
+@media only screen and (max-width: 1193px) {
+}
+
+#applicationWrap {
+  position: relative;
+  width: 1194px;
+  height: 834px;
+  overflow: hidden;
+  border-top: 1px solid #707070;
+  border-bottom: 1px solid #707070;
+  border: 1px solid #707070;
+  margin: 0 auto; // Positional Control #1 - Needed for center
+}
+
+.iPad #applicationWrap {
+  width: 100%;
+  height: 100vh;
+
+  main > .container {
+    height: calc(100vh - 225px);
+    // border: 1px solid red;
+   
+  }
+  .modal.modal--dropshadow .modal__content {
+    height: 100%;
+  }
+}
+
+* .proportionalSpacer {
+  position: relative;
+  // border:1px solid orange;
+}
+
+.proportionalParent {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  resize: both;
+  transform-origin: 0% 0%;
+  transform-origin: 50% 0%; // Positional Control #2 - Needed for center
+  // border:1px solid green;
+}
+
+main > .container {
+  position: relative;
+  min-height: 610px;
+  padding: 82px 40px 0px 40px;
+}
+
+#home #applicationWrap {
+    background: url("../images/grey-bkgd.jpg") no-repeat center center / cover;
+}
+
+h1 {
+    text-align: center;
+    color: #991966;
+}
+
+.logo-container {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+    button {
+        margin: 0 10px;
+        color: #fff;
+        border: none;
+        border-radius: 12px;
+    }
+}   
+
+.btn1 {
+    background-color: #991966;
+}
+
+.btn2 {
+    background-color: #5B8303;
+}
+
+
+
+

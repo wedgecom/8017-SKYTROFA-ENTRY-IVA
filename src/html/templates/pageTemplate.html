@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name='viewport' content="width=device-width, initial-scale=1, user-scalable=no" />
+	<title>{{title}}</title>
+
+	{% if forDist %}
+	<link rel="stylesheet" href="./shared/css/main.css">
+	{% else %}
+	<link rel="stylesheet" href="/shared/css/main.css">
+	{% endif %}
+
+</head>
+
+<body id="{{id}}">
+
+	<div class="proportionalSpacer">
+		<div class="proportionalParent">
+		<div id="applicationWrap" class="proportional" >		
+	
+			<main id="{{page}}">
+				<div class="container">
+					{% block content %}
+					{% endblock %}
+				</div>
+	
+				{% include 'partials/isi-preview-modal.html' %}   
+	
+	
+				<div id="references" class="modal modal--dropshadow">
+					<div class="modal__content">
+						<img class="ref-toggle modal-close modal-close-full" src="{% if forDist %}.{% endif %}/shared/images/modal-close.svg" alt="Close">
+						<div>
+							<div class="title">REFERENCES</div>
+							<ol>
+								<li><span>Fanouriakis A, Kostopoulou M, Cheema K, et al. 2019 update of the Joint European League Against Rheumatism and European Renal Association&ndash;European Dialysis and Transplant Association (EULAR/ERA–EDTA) recommendations for the management of lupus nephritis. <i>Ann Rheum Dis</i>. 2020;79(6):713-723. doi:10.1136/annrheumdis-2020-216924</span></li>
+								<li><span>KDIGO. KDIGO 2021 clinical practice guideline for the management of glomerular diseases. <i>Kidney Int Suppl</i>. 2021;100(4):S1-S276. doi:10.1016/j.kint.2021.05.021 
+								</span></li>
+								<li><span>Chen YE, Korbet SM, Katz RS, Schwartz MM, Lewis EJ; Collaborative Study Group. Value of a complete or partial remission in severe lupus nephritis. <i>Clin J Am Soc Nephrol</i>. 2008;3(1):46-53. doi:10.2215/CJN.03280807</span></li>
+								<li><span>Tamirou F, D'Cruz D, Sangle S, et al; <i>MAINTAIN</i> Nephritis Trial Group. Long-term follow-up of the <i>MAINTAIN</i> Nephritis Trial, comparing azathioprine and mycophenolate mofetil as maintenance therapy of lupus nephritis. <i>Ann Rheum Dis</i>. 2016;75(3):526-531. doi:10.1136/annrheumdis-2014-206897</span></li>
+								<li><span>Hanaoka H, Kaneko Y, Kuwana M, Takeuchi T. Early achievement of complete renal response predicts good long-term renal outcome and low systemic damage in newly diagnosed lupus nephritis class III or IV. <i>Mod Rheumatol</i>. 2015;25(5):714-718. doi:10.3109/14397595.2014.1003172</span></li>
+								<li><span>Anders HJ, Saxena R, Zhao MH, Parodis I, Salmon JE, Mohan C. Lupus nephritis. <i>Nat Rev Dis Primers</i>. 2020;6(1):7. doi:10.1038/s41572-019-0141-9</span></li>
+								<li><span>Sakhi H, Moktefi A, Bouachi K, et al. Podocyte injury in lupus nephritis. <i>J Clin Med</i>. 2019;8(9):1340. doi:10.3390/jcm8091340</span></li>
+								<li><span>Levey AS, Grams ME, Inker LA. Uses of GFR and albuminuria level in acute and chronic kidney disease. <i>N Engl J Med</i>. 2022;386(22):2120-2128. doi:10.1056/NEJMra2201153</span></li>
+								<li><span>Lightstone L, Doria A, Wilson H, et al. Can we manage lupus nephritis without chronic corticosteroids administration? <i>Autoimmun Rev</i>. 2018;17(1):4-10. doi:10.1016/j.autrev.2017.11.002</span></li>
+								<li><span>Al Sawah S, Zhang X, Zhu B, et al. Effect of corticosteroid use by dose on the risk of developing organ damage over time in systemic lupus erythematosus—the Hopkins Lupus Cohort. <i>Lupus Sci Med</i>. 2015;2(1):e000066.</span></li>
+								<li><span>LUPKYNIS. Package insert. Aurinia Pharma U.S., Inc; 2021.</span></li>
+								<li><span>Rovin BH, Teng YKO, Ginzler EM, et al. Efficacy and safety of voclosporin versus placebo for lupus nephritis (AURORA 1): a double-blind, randomised, multicentre, placebo-controlled, phase 3 trial. <i>Lancet</i>. 2021;397(10289):2070-2080. doi:10.1016/S0140-6736(21)00578-X</span></li>
+								<li><span>Mackay M, Truman M, England N, Birardi V, Mina-Osorio P. Efficacy of voclosporin in recent onset lupus nephritis. Abstract. <i>Arthritis Rheumatol</i>. 2021;73(suppl 10).</span></li>
+								<li><span>Aurinia Pharma U.S., Inc. Data on file.</span></li>
+								<li><span>Teng YKO, Saxena A, Palmen M, Birardi V, Lisk L. Voclosporin for lupus nephritis: results of the two-year AURORA 2 continuation study. Presented at: European Renal Association 2022; May 19-22, 2022.</span></li>
+								<li><span>Askanase A, Hodge L, Birardi V, Leher H. Early reductions in proteinuria with voclosporin treatment across lupus nephritis biopsy classes: pooled data from the AURA-LV and AURORA 1 trials. Abstract FC056. <i>Nephrol Dial Transplant</i>. 2022;37(suppl 3):i820-i822. doi:10.1093/ndt/gfac108.004</span></li>
+							</ol>
+						</div>
+					</div>
+				</div>
+	
+
+	
+			</main>
+	
+			</div>
+		</div>
+	</div>
+
+
+	{% if forDist %}
+	<script src="./shared/js/veeva-library.js"></script>
+	{% endif %}
+	<script src="{% if forDist %}.{% endif %}/shared/js/jquery-3.6.0.min.js"></script>
+	<script src="{% if forDist %}.{% endif %}/shared/js/bundle.js"></script>
+
+	{% if forDist %}
+	<script language="JavaScript" type="text/javascript">
+		var links = document.querySelectorAll('a:not(.outbound), .inbound');
+		var projectName = '_PROJECT-NAME';
+
+		links.forEach(link => {
+			//console.log(link);
+			link.addEventListener('click', function (e) {
+				e.preventDefault();
+				//console.log(e);
+				var linkID = e.target.attributes['data-link'].value;
+				//console.log(linkID);
+
+				var fullLink = linkID + projectName + '.zip';
+				console.log(fullLink);
+				com.veeva.clm.gotoSlide(fullLink, "");
+				
+			});
+		});
+	</script>
+	{% endif %}
+
+
+	{% block scripts %}
+	{% endblock %}
+
+</body>
+
+</html>
