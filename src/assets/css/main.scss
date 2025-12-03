@@ -85,20 +85,38 @@ h1 {
 }
 
 .logo-container {
-    text-align: right;
-    margin-bottom: 20px;
+  width: 190px;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+    img {
+      width: 100%;
+    }
+
 }
 
+.content-container {
+  position: absolute;
+  top: 50%;;
+    // transform: translateY(0%);
+    height: 100%;
+    width: 100%;
 .button-container {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 40px;
     button {
         margin: 0 10px;
         color: #fff;
         border: none;
-        border-radius: 12px;
+        border-radius: 38px;
+        width: 230px;
+        height: 53px;
+        line-height: 0;
     }
 }   
+}
+
+
 
 .btn1 {
     background-color: #991966;
