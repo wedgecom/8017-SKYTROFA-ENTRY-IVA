@@ -1,0 +1,135 @@
+// Font Face Declarations
+@font-face {
+  font-family: 'HelveticaNeueLTStd-55Roman';
+  src: url('../fonts/HELVETICANEUELTSTD-ROMAN.OTF') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Fieldwork-Geo';
+  src: url('../fonts/Fieldwork-Geo-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Fieldwork-Geo';
+  src: url('../fonts/Fieldwork-Geo-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Fieldwork-Geo';
+  src: url('../fonts/Fieldwork-Geo-Demibold.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Fieldwork-Geo';
+  src: url('../fonts/Fieldwork-Geo-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Fieldwork-Geo';
+  src: url('../fonts/Fieldwork-Geo-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MinionPro';
+  src: url('../fonts/MinionPro-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'UniversLTStd';
+  src: url('../fonts/UniversLTStd.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'UniversLTStd';
+  src: url('../fonts/UniversLTStd-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'UniversLTStd';
+  src: url('../fonts/UniversLTStd-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'UniversBoldCondensed';
+  src: url('../fonts/UniversLTStd-Cn.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: condensed;
+}
+
+@font-face {
+  font-family: 'UniversBoldCondensed';
+  src: url('../fonts/UniversLTStd-BoldCn.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: condensed;
+}
+
+.fine {
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 300;
+  color: #000;
+
+  strong {
+    font-weight: 700;
+  }
+}
+
+strong {
+
+    font-weight: 700;
+}
+
+.condensed {
+    font-family: 'UniversBoldCondensed', Arial, sans-serif;
+    font-weight: 400;
+}
+
+
+.condensed-bold {
+    font-family: 'UniversBoldCondensed', Arial, sans-serif;
+    font-weight: 600;
+}

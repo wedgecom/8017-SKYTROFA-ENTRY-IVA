@@ -19,22 +19,32 @@ function doProportionalResize(design) {
 	console.log('doProportionalResize');
 
 	var $design = jQuery(design);
+
+	// Design dimensions (calculated from actual element)
 	var designWidth = $design.width();
 	var designHeight = $design.height();
-	var parentWidth = $design.closest('.proportionalParent').width();
-	var parentHeight = $design.closest('.proportionalParent').height();
+	var aspectRatio = designWidth / designHeight;
+
+	// Viewport dimensions
+	var viewportWidth = window.innerWidth;
+	var viewportHeight = window.innerHeight;
+
+	// Calculate scale based on BOTH width and height constraints
+	var scaleByWidth = viewportWidth / designWidth;
+	var scaleByHeight = viewportHeight / designHeight;
+
+	// Use the SMALLER scale to ensure content fits both dimensions
+	var scale = Math.min(scaleByWidth, scaleByHeight);
+
 	console.log(
-		'designWidth: ',designWidth,
-		'\ndesignHeight: ', designHeight,
-		'\nparentWidth: ', parentWidth,
-		'\nparentHeight: ', parentHeight);
-
-	var scale;
-
-	scale = parentHeight / designHeight;
-
-	//console.log('scale:', scale);
-	//console.log('proportionalParentHeight:', proportionalParentHeight);
+		'designWidth:', designWidth,
+		'\ndesignHeight:', designHeight,
+		'\nviewportWidth:', viewportWidth,
+		'\nviewportHeight:', viewportHeight,
+		'\nscaleByWidth:', scaleByWidth,
+		'\nscaleByHeight:', scaleByHeight,
+		'\nfinal scale:', scale
+	);
 
 
 
@@ -47,34 +57,21 @@ function doProportionalResize(design) {
 
 	var isIpad = isIpadOS();
 
-	if (navigator.platform) {
-		console.log('navigator:platform = ', navigator.platform);
-	}
+	if (navigator.platform !== 'iPad' && !isIpad) {
+		console.log('navigator:platform =', navigator.platform);
+		console.log('scaling to:', scale);
 
-	if (parentWidth === 1366) {
-		console.log('1366');
-	}
+		// Apply scale transform
+		$design.closest('.proportionalParent').css({
+			transform: "scale(" + scale + ")"
+		});
 
-	if (parentHeight === 1024) {
-		console.log('1024');
-	}
+		// Calculate scaled dimensions for the spacer
+		var scaledHeight = designHeight * scale;
 
-	if (navigator.platform !== 'iPad' && parentHeight !== 1024) {
-
-		console.log('navigator:platform = ', navigator.platform);
-		console.log('scaling');
-
-		if (scale > 1) {
-			$design.closest('.proportionalParent').css({
-				transform: "scale(" + scale + ")"
-			});
-
-			var proportionalParentHeight = $design.closest('.proportionalParent').height() * scale;
-
-			$design.closest('.proportionalSpacer').css({
-				height: proportionalParentHeight
-			});
-		}
+		$design.closest('.proportionalSpacer').css({
+			height: scaledHeight + 'px'
+		});
 	} else {
 		document.querySelector('body').classList.add('iPad');
 	}
