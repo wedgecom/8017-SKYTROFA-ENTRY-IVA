@@ -1,105 +1,30 @@
-// iPad sizes 
-body {
+.iPad {
+  height: 100%;
+  #applicationWrap {
+    border: none;
+    height: 100vh;
+  }
 
-  // 9th gen iPad
-  @media only screen 
-  and (max-device-width: 1080px)   
-  and (max-device-width: 1080px) 
-  and (min-device-height: 810px) 
-  and (max-device-height: 810px) 
-  and (orientation: landscape) 
-  and (-webkit-min-device-pixel-ratio: 2) {    
+  .proportionalSpacer,
+  .proportionalParent {
+   height: 100vh!important;
+  }
+}
 
+.iPad--pro-12-9 {
 
-    .proportionalParent {
-      height: 100vh;
+  .proportionalSpacer,
+  .proportionalParent {
+   height: 100vh!important;
+  }
+
+  #applicationWrap {
+    overflow: visible;
+
+    .content-container {
+      top: 55%;
     }
-
-    #applicationWrap {
-      border: none !important; 
-      width: 100vw;       
-      height: 100vh;
-    }
-
-    .container {
-      transform-origin: top center;
-      transform: scale(.95);
-      min-height: 648px;
-      padding: 63px 0 0 0;
-    }
-
-    // .isi-preview {
-    //   width: 100vw;
-    //   // bottom: 6px;
-    // }
+  }
 
 }
-// end  // 9th gen iPad
-
-
-
-
-  // iPad air and 10th gen iPad
-  @media only screen 
-  and (max-device-width: 1180px)   
-  and (max-device-width: 1180px) 
-  and (min-device-height: 820px) 
-  and (max-device-height: 820px) 
-  and (orientation: landscape) 
-  and (-webkit-min-device-pixel-ratio: 2) {
-
-    #applicationWrap {
-      border: none !important;
-    }
-}
-// end  iPad air and 10th gen iPad
-
-
-
-
-  // iPad Pro 11 inch
-  @media only screen 
-  and (max-device-width: 1194px)   
-  and (max-device-width: 1194px) 
-  and (min-device-height: 834px) 
-  and (max-device-height: 834px) 
-  and (orientation: landscape) 
-  and (-webkit-min-device-pixel-ratio: 2) {
-
-    #applicationWrap {
-      border: none !important;
-    }
-
-}
-// end iPad Pro 11 inch
-
-
-
-
-
-
-  // iPad Pro 13 inch
-  @media only screen 
-  and (max-device-width: 1376px)   
-  and (max-device-width: 1376px) 
-  and (min-device-height: 1032px) 
-  and (max-device-height: 1032px) 
-  and (orientation: landscape) 
-  and (-webkit-min-device-pixel-ratio: 2) {
-
-    #applicationWrap {
-      border: none !important;
-    }
-
-    .container {
-      transform-origin: top center;
-      transform: scale(.9);
-      min-height: 648px;
-      padding: 63px 0 0 0;
-    }
-}
-// end iPad Pro 11 inch
-
-
-}
-// specific iPad sizes
+// .iPad--pro-12-9
